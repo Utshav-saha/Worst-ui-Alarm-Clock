@@ -22,9 +22,9 @@ const agreementText = [
 ].join(" ");
 
 const mathSolution = "40";
-const mathImage = "/public/math_prob.png";
+const mathImage = "/math_prob.png";
 const codeSolution = "34";
-const codeImage = "/public/code.png";
+const codeImage = "/code.png";
 
 // --- ICONS ---
 const WatchSvg = () => (
