@@ -89,9 +89,9 @@ export default function AlarmApp() {
   const [inputCode, setInputCode] = useState("");
 
   // Track mistakes
-  const [mistakesMade, setMistakesMade] = useState(0); // For sentence
-  const [mathMistakes, setMathMistakes] = useState(0); // For Math
-  const [codeMistakes, setCodeMistakes] = useState(0); // For Code
+  const [mistakesMade, setMistakesMade] = useState(0); 
+  const [mathMistakes, setMathMistakes] = useState(0); 
+  const [codeMistakes, setCodeMistakes] = useState(0); 
 
   const [buttonCoords, setButtonCoords] = useState([
     { top: "50%", left: "50%" },
@@ -104,7 +104,7 @@ export default function AlarmApp() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      alarmSound.current = new Audio("/public/alarm.mp3");
+      alarmSound.current = new Audio("/alarm.mp3");
       alarmSound.current.loop = true;
     }
   }, []);
@@ -528,7 +528,7 @@ export default function AlarmApp() {
 
           {challengeLevel === 0 && (
             <>
-              {["stop", "snooze", "silence"].map((actionType, idx) => (
+              {["volume++", "snooze", "silence"].map((actionType, idx) => (
                 <button
                   key={actionType}
                   onMouseEnter={() => dodgeCursor(idx)}
@@ -558,7 +558,7 @@ export default function AlarmApp() {
                     </h2>
                     <p className="text-cyan-700">
                       Call <span className="text-cyan-500">01234567899</span>{" "}
-                      (Check Console)
+                      
                     </p>
                     <input
                       type="text"
